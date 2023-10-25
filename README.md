@@ -209,7 +209,7 @@ I will be building the RubyOnRails-Blog for three weeks. Here is the list of pro
 <!-- > Add a link to your deployed project. -->
 <!-- - Click the following url for [... Live Demo ...]() -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- GETTING STARTED -->
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -349,38 +349,9 @@ Credits and Thanks to:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
-<!-- ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-<!-- > Add at least 2 questions new developers would ask when they decide to use your project. -->
-
-<!-- - **[Question_1]** -->
-
-  <!-- - [Answer_1] -->
-
-<!-- - **[Question_2]** -->
-
-  <!-- - [Answer_2] -->
-
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
 <!-- LICENSE -->
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-<!-- Creative Commons License - Start -->
-<!-- Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
-
-This work is licensed under a
-[Creative Commons Attribution 4.0 International License][cc-by].
-
-[![CC BY 4.0][cc-by-image]][cc-by]
-
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg -->
-<!-- Creative Commons License - End -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
