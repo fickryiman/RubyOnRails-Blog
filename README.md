@@ -76,7 +76,56 @@ I will be building the RubyOnRails-Blog for three weeks. Here is the list of pro
       <img src="./public/blog_app_erd_v1_1.png" alt="Data model" width="500px" />
     </p>
 
-- Project 2: Processing data in models & Validations and Model specs
+- Project 2: Processing data in models
+  - Create models
+    - Create model classes for all entities as shown in the ERD diagram.
+    - Set up associations between models.
+      - Remember that author_id column in posts table should be the foreign_key for the users table.
+  - Use models to insert data
+    - Open `rails console` command on the project folder
+    - Create at least one user by running the following code:
+      ```ruby
+        User.create(name: 'Fickry', photo: 'https://unsplash.com/photos/a-man-with-a-white-beard-and-a-gray-turban-l9-G4RM_LYc', bio: 'Man with a white beard and a gray turban.')
+        User.create(name: 'Altin', photo: 'https://unsplash.com/photos/a-man-with-red-lipstick-on-his-face-OaSkiXe0vQA', bio: 'Man with red lipstick on his face.')
+        User.create(name: 'Sajad', photo: 'https://unsplash.com/photos/a-man-in-an-orange-jacket-and-sunglasses-j30dP1-EOeQ', bio: 'Man in orange jacket and sunglasses.')
+        User.create(name: 'Karsten', photo: 'https://unsplash.com/photos/a-woman-with-her-arms-crossed-standing-in-a-field-kntovEvTQ5E', bio: 'Woman with her arms crossed standing in a field.')
+        User.create(name: 'Keibalo', photo: 'https://unsplash.com/photos/a-close-up-of-a-person-with-red-hair-UKNtvXVxyQU', bio: 'Close up woman with red hair.')
+        User.create(name: 'Atiyeh', photo: 'https://unsplash.com/photos/a-woman-wearing-a-green-shawl-with-red-flowers-on-it-9BiimsEWffs', bio: 'Woman wearing a green shawl with red flowers on it.')
+        User.create(name: 'Tetiana', photo: 'https://unsplash.com/photos/a-black-and-white-photo-of-a-woman-smiling-_B2VNYbOez4', bio: 'Black and white photo of a woman smiling.')
+      ```
+    - Create at least 4 posts written by one of the users you created by running the following code:
+      ```ruby
+        Post.create(author: User.find(1), title: 'Hello', text: 'This is my first post')
+        Post.create(author: User.find(1), title: 'Hello', text: 'This is my second post')
+        Post.create(author: User.find(1), title: 'Hello', text: 'This is my third post')
+        Post.create(author: User.find(1), title: 'Hello', text: 'This is my fourth post')
+        Post.create(author: User.find(2), title: 'Hello', text: 'This is my first post')
+        Post.create(author: User.find(2), title: 'Hello', text: 'This is my second post')
+        Post.create(author: User.find(3), title: 'Hello', text: 'This is my first post')
+        Post.create(author: User.find(4), title: 'Hello', text: 'This is my first post')
+      ```
+    - Create at least 6 posts comments for one of the posts you created by running the following code:
+      ```ruby
+        Comment.create(post: Post.find(1), user: User.find(2), text: 'Hi Fickry!, Altin here' )
+        Comment.create(post: Post.find(1), user: User.find(3), text: 'Hi Fickry!, Sajad here' )
+        Comment.create(post: Post.find(1), user: User.find(4), text: 'Hi Fickry!, Karsten here' )
+        Comment.create(post: Post.find(1), user: User.find(5), text: 'Hi Fickry!, Keibalo here' )
+        Comment.create(post: Post.find(1), user: User.find(6), text: 'Hi Fickry!, Atiyeh here' )
+        Comment.create(post: Post.find(1), user: User.find(7), text: 'Hi Fickry!, Tetiana here' )
+      ```
+  - Create custom methods
+    - Users
+      - A method that returns the 3 most recent posts for a given user.
+    - Posts
+      - A method that updates the posts counter for a user.
+      - A method which returns the 5 most recent comments for a given post.
+    - Comments
+      - A method that updates the comments counter for a post.
+    - Likes
+      - A method that updates the likes counter for a post.
+    - Go to `rails c` and check if your methods are working.
+
+- Project 3: Processing data in models & Validations and Model specs
   - Processing data in models
     - User model
       - a method that returns the 3 most recent posts for a given user.
