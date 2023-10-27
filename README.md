@@ -125,30 +125,19 @@ I will be building the RubyOnRails-Blog for three weeks. Here is the list of pro
       - A method that updates the likes counter for a post.
     - Go to `rails c` and check if your methods are working.
 
-- Project 3: Processing data in models & Validations and Model specs
-  - Processing data in models
+- Project 3: Validations and Model specs
+  - Add the following validations:
     - User model
-      - a method that returns the 3 most recent posts for a given user.
-      - a method that updates the posts counter for a user.
+      - Name must not be blank.
+      - PostsCounter must be an integer greater than or equal to zero.
     - Post model
-      - a method which returns the 5 most recent comments for a given post.
-      - a method that updates the comments counter for a post.
-      - a method that updates the likes counter for a post.
-  - Validations and Model specs
-    - Use validations for models.
-    - Write unit tests for models.
-    - Add the following validations:
-      - For the User model:
-        - Name must not be blank.
-        - PostsCounter must be an integer greater than or equal to zero.
-      - For the Post model:
-        - Title must not be blank.
-        - Title must not exceed 250 characters.
-        - CommentsCounter must be an integer greater than or equal to zero.
-        - LikesCounter must be an integer greater than or equal to zero.
-    - Add unit specs for all of models' methods and validations.
+      - Title must not be blank.
+      - Title must not exceed 250 characters.
+      - CommentsCounter must be an integer greater than or equal to zero.
+      - LikesCounter must be an integer greater than or equal to zero.
+  - Add unit specs for all of your models' methods and validations.
 
-- Project 3: Controllers.
+- Project 4: Controllers.
   - Use controllers to handle requests and render empty views.
   - Implements Rails naming conventions.
   - Use params from browser requests in a safe way.
