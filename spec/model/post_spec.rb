@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Post", type: :model do
+RSpec.describe 'Post', type: :model do
   before :each do
     @user = User.new(name: 'Fickry')
   end

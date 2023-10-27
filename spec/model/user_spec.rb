@@ -1,7 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "User", type: :model do
-  subject { User.new(name: 'Bil Iman', photo: 'https://unsplash.com/photos/a-black-and-white-photo-of-a-man-holding-a-child-Ho-D_R4MfYc', bio: 'Man in mistaken') } 
+RSpec.describe 'User', type: :model do
+  subject do
+    User.new(name: 'Bil Iman',
+             photo: 'https://unsplash.com/photos/a-black-and-white-photo-of-a-man-holding-a-child-Ho-D_R4MfYc', bio: 'Man in mistaken')
+  end
 
   before { subject.save }
 
