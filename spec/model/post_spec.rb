@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Post", type: :model do
+RSpec.describe 'Post', type: :model do
   before :each do
     @user = User.new(name: 'Fickry')
   end
@@ -15,7 +15,10 @@ RSpec.describe "Post", type: :model do
   end
 
   it 'title should not be to long, maximum length is 250 characters' do
-    subject.title = 'abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890'
+    subject.title = 'abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890' \
+                    'abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890' \
+                    'abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890' \
+                    'abcdefghijklmnopqrstuvwxyz1234567890'
     expect(subject).to_not be_valid
   end
 
