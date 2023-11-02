@@ -1,28 +1,18 @@
 <div class="container border-card p-4">
-  <div class="flex-col items-center">
-    <h1><%= @post.title %></h1>
-    <span style="font-size: large; font-weight:300;"><%= @user.name %></span>
-    <span style="font-size: smaller; font-weight:100; margin-top: 10px">
-      Comments: <%= @post.comments_counter || 0 %>, 
-      Likes: <%= @post.likes_counter || 0 %>
-    </span>
-  </div>
-
-  <div class="post-text">
-    <%= @post.text %>
-  </div>
-
-  <div class="comment-container">
-    <%= form_with model: @comment, url: user_post_comments_path(user_id: @user.id, post_id: @post.id), class: "flex items-start gap-1" do |form| %>
-      <%= form.text_area :text, placeholder: "Write a comment...", size: "70x5" %>
-      <%= form.submit "Add new comment" %>
-    <% end %>
-  </div>
-
-  <div class="comment-container">
-    <%= form_with model: @like, url: user_post_likes_path(@post.author_id, @post), class: "flex items-start gap-1" do |form| %>
-      <%= form.submit "Add post likes", class: "w-full" %>
-    <% end %>
+  <div class="flex-col">
+    <div class="flex-col-post-details">
+      <h3>
+        <%= @post.title %> by <%= @user.name %>
+      </h3>
+      <span style="font-size: smaller; font-weight:100; margin-top: 10px;">
+        Comments: <%= @post.comments_counter || 0 %>, 
+        Likes: <%= @post.likes_counter || 0 %>
+      </span>
+    </div>
+    
+    <div class="post-text">
+      <%= @post.text %>
+    </div>
   </div>
 
   <%= render partial: "templates/comment_card", locals: {comments: @post.comments} %>

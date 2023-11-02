@@ -221,6 +221,13 @@ h6 {
   padding: 10px 15px;
 }
 
+.flex-col-post-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
 .flex-col-comment {
   display: flex;
   flex-direction: column;
