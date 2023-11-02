@@ -1,1 +1,24 @@
-<h1>Detail of specific user define it by the id</h1>
+<div class="container">
+  <%= render partial: "templates/user", locals: { user: @user} %>
+
+  <div class="user-card gap-0 flex-col items-start border-card-bio">
+    <span class="card-title">Bio</span>
+    <span class="user-bio"><%= @user.bio %></span>
+  </div>
+  
+  <% if @user_recent_posts.any? %>
+    <% @user_recent_posts.each do |user_recent_post| %>
+      <%= render partial: "templates/post_card", locals: { post: user_recent_post, comments: nil } %>
+    <% end %>
+
+    <a
+      href="<%= user_posts_path(user_id: @user.id) %>"
+      class="see-all-posts" 
+      style="width: fit-content;"
+    >
+      See all posts
+    </a>
+  <% else %>
+    <p>No posts found for this user</p>
+  <% end %>
+</div>

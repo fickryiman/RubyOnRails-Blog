@@ -1,0 +1,13 @@
+<div class="comment-container flex-col-comment gap-0-5">
+  <% if comments.any? %>
+    <% comments.each do |comment| %>
+      <div  class="comment-card">
+        <div class="comment-name-text">
+          <%= comment.user.name %>: <%= comment.text %>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <div>No Comment yet for this post</div>
+  <% end %>
+</div>

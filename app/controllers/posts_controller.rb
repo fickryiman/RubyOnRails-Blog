@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @user = User.find(params[:user_id])
+    @posts = @user.posts.order(created_at: :desc)
   end
 end

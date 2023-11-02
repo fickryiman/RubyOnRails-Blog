@@ -13,3 +13,292 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*
+   1. Use a more-intuitive box-sizing model.
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+   2. Remove default margin
+ */
+* {
+  margin: 0;
+}
+
+/*
+   Typographic tweaks!
+   3. Add accessible line-height
+   4. Improve text rendering
+ */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Balsamiq Sans', sans-serif;
+}
+
+/*
+   5. Improve media defaults
+ */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+   6. Remove built-in form typography styles
+ */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+   7. Avoid text overflows
+ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+   8. Create a root stacking context
+ */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.body-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* users */
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 10px;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.user-card:hover {
+  cursor: pointer;
+  outline: 2px teal solid;
+  outline-offset: 4px;
+  transition: ease-in-out;
+}
+
+.user-photo {
+  width: 110px;
+  height: 100px;
+  border: 3px rgb(32, 32, 32) solid;
+  object-fit: cover;
+  filter: grayscale();
+}
+
+.user-card-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  height: 90%;
+  justify-content: space-between;
+}
+
+.user-bio {
+  font-size: 13px;
+  color: rgb(62, 62, 62);
+  font-weight: 200;
+  font-style: italic;
+  margin-top: 3px;
+}
+
+.user-totalpost {
+  font-size: 14px;
+  text-align: right;
+}
+
+.see-all-posts {
+  padding: 10px 20px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  /* border: 1px rgba(0, 0, 0, 0.307) solid; */
+  background-color: #0000001a;
+  box-shadow: 3px 5px 1px rgba(0, 0, 0, 0.733);
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
+  align-self: center;
+}
+
+/* posts */
+.post-text {
+  font-size: medium;
+  text-align: left;
+  width: 100%;
+}
+
+.add-new-post {
+  padding: 10px 20px;
+  margin-top: 10px;
+  box-shadow: 3px 5px 1px rgb(255, 215, 154);
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(255, 189, 89);
+  background-color: rgb(51, 51, 51);
+}
+
+/* comments */
+.comment-container {
+  background-color: #9ff3d34b;
+  border-radius: var(--border-radius);
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.comment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.comment-name-text {
+  font-weight: 400;
+  font-size: sma;
+}
+
+/* utils */
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 650px;
+  gap: 5px;
+  width: 100%;
+  padding: 25px 0;
+}
+
+.border-card-bio {
+  border: 2px black solid;
+  border-radius: var(--border-radius);
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  border: 3px rgb(32, 32, 32) solid;
+  padding: 10px 20px;
+}
+
+.flex-col-post {
+  display: flex;
+  flex-direction: column;
+  border: 3px rgb(32, 32, 32) solid;
+  padding: 10px 15px;
+}
+
+.flex-col-comment {
+  display: flex;
+  flex-direction: column;
+  border: 1px rgb(92, 248, 157) solid;
+  padding: 10px 10px;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.p-4 {
+  padding: 16px;
+}
+
+.gap-0 {
+  gap: 0;
+}
+
+.gap-0-5 {
+  gap: 0.5px;
+}
+
+.gap-1 {
+  gap: 10px;
+}
+
+.gap-2 {
+  gap: 20px;
+}
+
+.gap-5 {
+  gap: 50px;
+}
+
+.items-start {
+  align-items: start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.user-card-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.alert {
+  color: red;
+}

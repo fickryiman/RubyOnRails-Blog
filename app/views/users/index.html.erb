@@ -1,1 +1,11 @@
-<h1>List of All Users</h1>
+<div class="container">
+  <% if @users.any? %>
+    <% @users.each do |user| %>
+      <a href="/users/<%= user.id %>" >
+        <%= render "templates/user", user: user %>
+      </a>
+    <% end %>
+  <% else %>
+    <h1 class="text-center m-auto">No users registered</h1>
+  <% end %>
+</div>
