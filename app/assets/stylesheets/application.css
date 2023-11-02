@@ -143,12 +143,13 @@ h6 {
   padding: 10px 20px;
   margin-top: 5px;
   margin-bottom: 25px;
+
   /* border: 1px rgba(0, 0, 0, 0.307) solid; */
   background-color: #0000001a;
   box-shadow: 3px 5px 1px rgba(0, 0, 0, 0.733);
   cursor: pointer;
   text-decoration: none;
-  color: #000000;
+  color: #000;
   align-self: center;
 }
 
@@ -186,7 +187,7 @@ h6 {
 
 .comment-name-text {
   font-weight: 400;
-  font-size: sma;
+  font-size: small;
 }
 
 /* utils */
