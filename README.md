@@ -161,7 +161,14 @@ I will be building the RubyOnRails-Blog for three weeks. Here is the list of pro
     ![Single Post page wireframe](./public/routes.png)
 
 - Project 4: Controllers specs.
+  - Write test for controllers.
+  - The test is under folder spec > requests
+  
 - Project 5: Views.
+  - Use preprocessed HTML file with embedded Ruby code.
+  - Use layouts and templates for shared content.
+  - Implement the design from the wireframes.
+  
 - Project 6: Forms.
 - Project 7: Integration specs for Views and fixing n+1 problems.
 - Project 8: Add Devise.
