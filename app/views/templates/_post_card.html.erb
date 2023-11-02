@@ -1,0 +1,18 @@
+<a class="user-card gap-0-5 flex-col-post items-start" href="/users/<%= post.author_id %>/posts/<%= post.id %>">
+  <span class="card-title"><%= post.title %></span>
+  <span class="user-bio line-clamp-2"><%= post.text %></span>
+  <span class="user-totalpost w-full">
+    Comments: <%= post.comments_counter || 0 %>, 
+    Likes: <%= post.likes_counter || 0 %>
+  </span>
+
+    <% if comments.present? %>
+      <% if comments.any? %>
+        <%= render partial: "templates/comment_card", locals: {comments: comments} %>
+      <% else %>
+        <div class="comment-container">
+          <div>No comment yet for this post</div>
+        </div>
+      <% end %>
+    <% end %>
+</a>
