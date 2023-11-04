@@ -1,0 +1,13 @@
+<% if flash[:alert].present? %>
+  <div class="alert">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
+<%= form_with model: @post, url: user_posts_path(user_id: @user.id), class: "user-card flex-col items-start gap-1" do |f| %>
+  <%= f.label :title, "Title of the post :" %>
+  <%= f.text_field :title %>
+  <%= f.label :text, "Post text :" %>
+  <%= f.text_area :text, size: "70x5" %>
+  <%= f.submit "Add a new post" %>
+<% end %>

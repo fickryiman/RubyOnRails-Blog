@@ -96,7 +96,7 @@ h6 {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding-top: 10px;
+  margin-bottom: 5px;
   width: 100%;
   text-decoration: none;
   color: black;
@@ -151,9 +151,21 @@ h6 {
   text-decoration: none;
   color: #000;
   align-self: center;
+  width: fit-content;
 }
 
 /* posts */
+
+.post-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 10px;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
 .post-text {
   font-size: medium;
   text-align: left;
@@ -162,21 +174,67 @@ h6 {
 
 .add-new-post {
   padding: 10px 20px;
-  margin-top: 10px;
-  box-shadow: 3px 5px 1px rgb(255, 215, 154);
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-shadow: 3px 5px 1px rgb(253, 197, 197);
   cursor: pointer;
   text-decoration: none;
-  color: rgb(255, 189, 89);
+  color: rgb(255, 255, 255);
   background-color: rgb(51, 51, 51);
+  align-self: center;
+  width: fit-content;
+}
+
+/* likes */
+.like-container {
+  width: 30%;
+  padding: 5px;
+  box-sizing: border-box;
+  align-self: center;
+}
+
+.add-like-button {
+  padding: 5px 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-shadow: 3px 5px 1px rgb(28, 27, 27);
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  align-self: center;
+  width: fit-content;
 }
 
 /* comments */
+.add-comment-button {
+  padding: 5px 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-shadow: 3px 5px 1px rgb(28, 27, 27);
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  align-self: center;
+  width: fit-content;
+}
+
+.add-comment-container {
+  background-color: #f39feb4b;
+  border-radius: var(--border-radius);
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
 .comment-container {
   background-color: #9ff3d34b;
   border-radius: var(--border-radius);
   width: 100%;
   padding: 15px;
   box-sizing: border-box;
+  margin-bottom: 30px;
 }
 
 .comment-card {
@@ -187,7 +245,8 @@ h6 {
 
 .comment-name-text {
   font-weight: 400;
-  font-size: small;
+  font-size: 13px;
+  margin: 5px;
 }
 
 /* utils */

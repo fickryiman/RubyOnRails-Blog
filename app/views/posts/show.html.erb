@@ -9,10 +9,23 @@
         Likes: <%= @post.likes_counter || 0 %>
       </span>
     </div>
-    
+     
     <div class="post-text">
       <%= @post.text %>
     </div>
+  </div>
+
+  <div class="add-comment-container">
+    <%= form_with model: @comment, url: user_post_comments_path(user_id: @user.id, post_id: @post.id), class: "flex items-start gap-1" do |form| %>
+      <%= form.text_area :text, placeholder: "Write a comment...", size: "70x5" %>
+      <%= form.submit "Add new comment", class: "add-comment-button" %>
+    <% end %>
+  </div>
+
+  <div class="like-container">
+    <%= form_with model: @like, url: user_post_likes_path(@post.author, @post), class: "flex items-start gap-1" do |form| %>
+      <%= form.submit "Like this post", class: "add-like-button" %>
+    <% end %>
   </div>
 
   <%= render partial: "templates/comment_card", locals: {comments: @post.comments} %>

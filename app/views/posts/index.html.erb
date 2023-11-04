@@ -1,5 +1,6 @@
 <div class="container">
   <%= render "templates/user", user: @user %>
+
   <% @posts.each do |post| %>
     <%= render "templates/post_card", post: post, comments: post.recent_comments %>
   <% end %>

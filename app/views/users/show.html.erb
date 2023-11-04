@@ -11,13 +11,8 @@
       <%= render partial: "templates/post_card", locals: { post: user_recent_post, comments: nil } %>
     <% end %>
 
-    <a
-      href="<%= user_posts_path(user_id: @user.id) %>"
-      class="see-all-posts" 
-      style="width: fit-content;"
-    >
-      See all posts
-    </a>
+    <%= link_to "See all posts", user_posts_path(user_id: @user.id), class: "see-all-posts"%>
+
   <% else %>
     <p>No posts found for this user</p>
   <% end %>
