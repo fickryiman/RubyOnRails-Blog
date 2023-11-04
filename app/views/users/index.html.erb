@@ -1,4 +1,7 @@
 <div class="container">
+
+  <%= link_to "Add a new post", new_user_post_path(user_id: @user.id), class: "add-new-post"%>
+  
   <% if @users.any? %>
     <% @users.each do |user| %>
       <a href="/users/<%= user.id %>" >
