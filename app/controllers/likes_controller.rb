@@ -6,7 +6,7 @@ class LikesController < ApplicationController
     @like.user = current_user
 
     if @like.save
-      flash[:success] = "Liked is added!"
+      flash[:success] = 'Liked is added!'
     else
       flash[:error] = 'Likes could not be added!'
     end
