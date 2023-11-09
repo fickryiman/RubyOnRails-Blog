@@ -28,4 +28,14 @@ RSpec.feature 'User Post Index Page' do
     expect(page).to have_content(comment2.text)
     expect(page).to have_content("Comments: #{post.comments_counter}")
   end
+
+  scenario 'Displays pagination if there are more posts' do
+    10.times do
+      Post.create(author_id: user.id, title: 'Test Post', text: 'This is the body of the post.',
+                  comments_counter: 0, likes_counter: 0)
+    end
+
+    visit user_posts_path(user)
+    expect(page).to have_css('.post-card')
+  end
 end
