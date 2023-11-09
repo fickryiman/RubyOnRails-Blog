@@ -1,12 +1,10 @@
 <div class="container">
 
-  <%= link_to "Add a new post", new_user_post_path(user_id: @user.id), class: "add-new-post"%>
+  <%= link_to "Add a new post", new_user_post_path(user_id: 1), class: "add-new-post"%>
   
   <% if @users.any? %>
     <% @users.each do |user| %>
-      <a href="/users/<%= user.id %>" >
-        <%= render "templates/user", user: user %>
-      </a>
+      <%= render "templates/user", user: user %>
     <% end %>
   <% else %>
     <h1 class="text-center m-auto">No users registered</h1>

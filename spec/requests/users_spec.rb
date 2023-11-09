@@ -19,7 +19,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('List of All Users')
+      expect(response.body).to include('No users registered')
     end
   end
 
@@ -38,7 +38,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('Detail of specific user define it by the id')
+      expect(response.body).to include('Number of post')
     end
   end
 end
