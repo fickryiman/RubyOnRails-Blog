@@ -3,8 +3,8 @@ RSpec.feature 'User Index Page' do
   # Create some test users and posts
   let!(:user1) { User.create(name: 'user1', photo: 'https://unsplash.com/photos/a-man-with-a-white-beard-and-a-gray-turban-l9-G4RM_LYc', posts_counter: 0) }
   let!(:user2) { User.create(name: 'user2', photo: 'https://unsplash.com/photos/a-man-with-red-lipstick-on-his-face-OaSkiXe0vQA', posts_counter: 0) }
-  let!(:post1) { Post.create(author: user1, title: 'user1 post test') }
-  let!(:post2) { Post.create(author: user2, title: 'user2 post test') }
+  let!(:post1) { Post.create(author: user1, title: 'user1 post test', comments_counter: 0, likes_counter: 0) }
+  let!(:post2) { Post.create(author: user2, title: 'user2 post test', comments_counter: 0, likes_counter: 0) }
 
   scenario 'Displays usernames' do
     visit users_path
