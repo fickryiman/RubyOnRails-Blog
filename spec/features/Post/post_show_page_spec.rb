@@ -2,7 +2,10 @@ require 'rails_helper'
 
 RSpec.feature 'Post Show Page' do
   let!(:user1) { User.create(name: 'Mike', bio: 'this is test bio', photo: 'https://unsplash.com/photos/a-man-with-a-white-beard-and-a-gray-turban-l9-G4RM_LYc', posts_counter: 0) }
-  let!(:post1) { Post.create(author_id: user1.id, title: 'Test post 1', text: 'This is the body of the post.', comments_counter: 0, likes_counter: 0) }
+  let!(:post1) do
+    Post.create(author_id: user1.id, title: 'Test post 1', text: 'This is the body of the post.', comments_counter: 0,
+                likes_counter: 0)
+  end
   let!(:comment1) { Comment.create(user: user1, post: post1, text: 'Comment 1') }
   let!(:comment2) { Comment.create(user: user1, post: post1, text: 'Comment 2') }
 
