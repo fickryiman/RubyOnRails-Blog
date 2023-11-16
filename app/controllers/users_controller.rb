@@ -6,6 +6,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.order('users.id ASC').all
-    @user = User.find(params[:id])
+    @user = current_user
   end
 end
