@@ -1,6 +1,9 @@
 <div class="container">
 
-  <%= link_to "Add a new post", new_user_post_path(user_id: 1), class: "add-new-post"%>
+  <% if user_signed_in? %>
+    <h4>Welcome <%= current_user.name %> </h4>
+    <%= link_to "Add a new post", new_user_post_path(user_id: @user.id), class: "add-new-post"%>
+  <% end %>
   
   <% if @users.any? %>
     <% @users.each do |user| %>
@@ -9,4 +12,6 @@
   <% else %>
     <h1 class="text-center m-auto">No users registered</h1>
   <% end %>
+
+  <%= link_to "Create User", new_user_registration_path, class: "create-user" %>
 </div>

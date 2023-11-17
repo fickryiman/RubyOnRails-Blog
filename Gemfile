@@ -75,3 +75,5 @@ group :test do
 end
 
 gem 'will_paginate'
+
+gem 'devise', '~> 4.9'
