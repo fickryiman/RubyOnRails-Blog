@@ -154,7 +154,8 @@ h6 {
   width: fit-content;
 }
 
-.signup_button, .login_button {
+.signup_button,
+.login_button {
   padding: 5px 10px;
   margin-top: 5px;
   margin-bottom: 25px;
@@ -417,6 +418,13 @@ h6 {
   padding: 10px 10px 10px 10px;
 }
 
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 30px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
 .nav > .nav-header > .nav-title > a {
   text-decoration: none;
   color: #fff;
@@ -431,13 +439,6 @@ h6 {
   display: inline;
   float: right;
   font-size: 18px;
-}
-
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 13px 30px 13px 10px;
-  text-decoration: none;
-  color: #efefef;
 }
 
 .nav > .nav-links > a:hover {
@@ -516,7 +517,9 @@ h6 {
   flex-direction: column;
 }
 
-#user_email, #user_password, #user_password_confirmation {
+#user_email,
+#user_password,
+#user_password_confirmation {
   width: 100%;
   display: block;
   margin-left: auto;
