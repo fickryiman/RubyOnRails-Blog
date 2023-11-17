@@ -154,6 +154,19 @@ h6 {
   width: fit-content;
 }
 
+.signup_button, .login_button {
+  padding: 5px 10px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  background-color: #0000001a;
+  box-shadow: 3px 5px 1px rgba(0, 0, 0, 0.733);
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  align-self: center;
+  width: fit-content;
+}
+
 .see-all-posts {
   padding: 10px 20px;
   margin-top: 5px;
@@ -404,6 +417,12 @@ h6 {
   padding: 10px 10px 10px 10px;
 }
 
+.nav > .nav-header > .nav-title > a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 20px;
+}
+
 .nav > .nav-btn {
   display: none;
 }
@@ -416,7 +435,7 @@ h6 {
 
 .nav > .nav-links > a {
   display: inline-block;
-  padding: 13px 10px 13px 10px;
+  padding: 13px 30px 13px 10px;
   text-decoration: none;
   color: #efefef;
 }
@@ -481,4 +500,26 @@ h6 {
     height: calc(100vh - 50px);
     overflow-y: auto;
   }
+}
+
+/* devise */
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+#new_user {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+#user_email, #user_password, #user_password_confirmation {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
